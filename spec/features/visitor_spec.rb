@@ -6,6 +6,7 @@ describe 'Visitor' do # who is doing the action
 		it "displays content on page" do
 			visit root_path
 			page.should have_selector('table')
+			page.all('tr').should have(3).items
 		end
 	end
 end
