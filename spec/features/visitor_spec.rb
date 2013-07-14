@@ -10,6 +10,7 @@ describe 'Visitor' do # who is doing the action
 			visit root_path
 			page.should have_selector('table')
 			page.all('tr').should have(3).items
+			page.all('td').should have(9).items
 		end
 	end
 end
