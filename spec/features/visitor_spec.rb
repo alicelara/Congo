@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe 'Visitor' do # who is doing the action
+
+	#As a user I want to visit  the home page and see a list of products.
 	context 'visits the front page' do # action		
 		it{should visit root_path} # the test itself
 		it "displays content on page" do
@@ -18,8 +20,11 @@ describe 'Visitor' do # who is doing the action
 		end
 	end
 
+# As a user I want to see a specific product on a product page
 	context 'visits the product page' do
-		visit root_path
-		click_link("Show Product")
+		it "should show the product" do
+			visit root_path
+			click_link("Show Product")
+		end
 	end
 end
